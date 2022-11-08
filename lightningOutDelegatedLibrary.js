@@ -174,6 +174,7 @@ $Lightning._delegate = (function() {
 
                 requestApp(applicationTag, lightningEndPointURI, authToken, paramsObj, function(xhr) {
                     var errorMarker = xhr.responseText.indexOf("/*ERROR*/");
+                    console.log('guarda qui'+ xhr.responseText);
                     if (errorMarker == -1) {
                         var config = JSON.parse(xhr.responseText);
 
