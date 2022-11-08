@@ -174,7 +174,7 @@ $Lightning._delegate = (function() {
                     var errorMarker = xhr.responseText.indexOf("/*ERROR*/");
                     if (errorMarker == -1) {
                         console.log('LOG: ' + xhr.responseText);
-                        var config = JSON.parse(xhr.responseText);
+                        var config = xhr.responseText;
 
                         // save the delegate version to local storage
                         try {
