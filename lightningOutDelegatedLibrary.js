@@ -139,7 +139,6 @@ $Lightning._delegate = (function() {
             }
         };
 
-        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
         xhr.open("POST", url, true);
 
         if(authToken || paramsObj) {
@@ -149,6 +148,7 @@ $Lightning._delegate = (function() {
             xhr.setRequestHeader("Authorization", "Bearer " + authToken);
             _previousRequestAuthToken = authToken;
         }
+        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 
         xhr.send();
     };
