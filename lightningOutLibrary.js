@@ -20,7 +20,7 @@ if (!window.$Lightning) {
 		function loadDelegateScript() {
 			var script = document.createElement('script');
 			script.type = "text/javascript";
-			script.src = "https://lorenzogiura.github.io/exportLwcTest/lightningOutDelegatedLibray.js";
+			script.src = "https://lorenzogiura.github.io/lightningOut/lightningOutDelegatedLibray.js";
 			script.onload = function() {
 				delegateLoaded = true;
 				while(callQueue.length) {
