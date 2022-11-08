@@ -149,7 +149,7 @@ $Lightning._delegate = (function() {
             _previousRequestAuthToken = authToken;
         }
         xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-        console.log('guarda qui'+ Json.stringify(xhr));
+        console.log('guarda qui'+ JSON.stringify(xhr));
         xhr.send();
     };
 
