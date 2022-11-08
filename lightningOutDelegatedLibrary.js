@@ -165,6 +165,7 @@ $Lightning._delegate = (function() {
             }
 
             if(!_applicationTag) {
+                console.log('if');
                 _applicationTag = applicationTag;
                 _pendingReadyRequests = [];
                 _ready = false;
@@ -211,6 +212,7 @@ $Lightning._delegate = (function() {
                     }
                 });
             } else if(authToken !== _previousRequestAuthToken && $A !== undefined && $A !== null) {
+                 console.log('else if');
                 // Update the CSRF token for the new authentication context.
                 requestApp(applicationTag, lightningEndPointURI, authToken, paramsObj, function(xhr) {
                     var config = JSON.parse(xhr.responseText);
