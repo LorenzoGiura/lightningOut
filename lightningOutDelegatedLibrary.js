@@ -165,7 +165,7 @@ $Lightning._delegate = (function() {
             }
 
             if(!_applicationTag) {
-                console.log('if');
+                console.log(_applicationTag);
                 _applicationTag = applicationTag;
                 _pendingReadyRequests = [];
                 _ready = false;
