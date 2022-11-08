@@ -138,13 +138,13 @@ $Lightning._delegate = (function() {
             }
         };
 
-        xhr.open("GET", url, true);
+        xhr.open("POST", url, true);
 
         if(authToken || paramsObj) {
             xhr.withCredentials = true;
         }
         if(authToken) {
-            xhr.setRequestHeader("Authorization", "OAuth " + authToken);
+            xhr.setRequestHeader("Authorization", "Bearer " + authToken);
             _previousRequestAuthToken = authToken;
         }
 
