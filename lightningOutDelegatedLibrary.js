@@ -104,6 +104,7 @@ $Lightning._delegate = (function() {
     };
 
     function requestApp(applicationTag, lightningEndPointURI, authToken, paramsObj, callback) {
+        console.log('Sono arrivato alla call');
         var parts = applicationTag.split(":");
 
         var url = parts[0] + "/" + parts[1] + ".app?aura.format=JSON&aura.formatAdapter=LIGHTNING_OUT";
