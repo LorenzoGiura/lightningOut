@@ -173,7 +173,7 @@ $Lightning._delegate = (function() {
                 requestApp(applicationTag, lightningEndPointURI, authToken, paramsObj, function(xhr) {
                     var errorMarker = xhr.responseText.indexOf("/*ERROR*/");
                     if (errorMarker == -1) {
-                        var config = xhr.responseText;
+                        var config = JSON.parse(xhr.responseText);
 
                         // save the delegate version to local storage
                         try {
