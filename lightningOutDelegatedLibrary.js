@@ -104,7 +104,6 @@ $Lightning._delegate = (function() {
     };
 
     function requestApp(applicationTag, lightningEndPointURI, authToken, paramsObj, callback) {
-        console.log('Sono arrivato alla call');
         var parts = applicationTag.split(":");
 
         var url = parts[0] + "/" + parts[1] + ".app?aura.format=JSON&aura.formatAdapter=LIGHTNING_OUT";
@@ -145,7 +144,7 @@ $Lightning._delegate = (function() {
             xhr.withCredentials = true;
         }
         if(authToken) {
-            xhr.setRequestHeader("Authorization", "Bearer " + authToken);
+            xhr.setRequestHeader("Authorization", "OAuth " + authToken);
             _previousRequestAuthToken = authToken;
         }
 
@@ -154,6 +153,13 @@ $Lightning._delegate = (function() {
 
     return {
         use: function(applicationTag, callback, lightningEndPointURI, authToken, paramsObj) {
+            
+            console.log('applicationTag: ' + applicationTag);
+            console.log('callback: ' + callback);
+            console.log('lightningEndPointURI: ' + lightningEndPointURI);
+            console.log('authToken: ' + authToken);
+            console.log('paramsObj: ' + paramsObj);
+
             if(_applicationTag && _applicationTag !== applicationTag) {
                 throw new Error("$Lightning.use() already invoked with application: " + _applicationTag);
             }
