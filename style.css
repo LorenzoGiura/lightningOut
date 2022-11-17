@@ -5,6 +5,10 @@
   padding: 0;
   margin: 0; }
 
+.provaDaCancellare{
+  font-size: 50px;
+}
+
 .idea-management-style {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
