@@ -21,19 +21,16 @@
             {}, // attributes to set on the component when created
             'dom_element_id', // the DOM location to insert the component
             function (cmp) {
-              // callback when component is created and active on the page
+                var link = document.createElement( "link" );
+                link.href = "style.css";
+                link.type = "text/css";
+                link.rel = "stylesheet";
+                document.getElementsByTagName( "head" )[0].appendChild( link );
             }
           );
         },
         'https://gunpowder--devint.sandbox.my.site.com' // Site endpoint
       );
     </script>
-    <script type="text/javascript">
-      var link = document.createElement( "link" );
-      link.href = "style.css";
-      link.type = "text/css";
-      link.rel = "stylesheet";
-      document.getElementsByTagName( "head" )[0].appendChild( link );
-     </script>
   </body>
 </html>
