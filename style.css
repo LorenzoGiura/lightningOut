@@ -9909,6 +9909,9 @@ a.no-link-decoration:after {
 	border: 1px solid #3addaa;
 }
 
+.section-open-request .gpds-custom-input-field label, .section-open-request .gpds-white-label label, .section-open-request .gpds-custom-input-field span.slds-form-element__label {
+	color: #67696B !important;
+}
   .careers__modale-form  span.gpds-text-primary-white {
 	  color: #67696B;
   }
