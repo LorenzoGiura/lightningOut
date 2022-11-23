@@ -2962,6 +2962,9 @@ pre code {
 		margin-left: 91.6666666667%;
 	}
 }
+.form-group {
+	margin-bottom: 1rem;
+}
 .accordion > .card {
 	overflow: hidden;
 }
